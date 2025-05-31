@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation Hébergement & Domaine pour Plateformes Ministérielles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .progress-bar {
+            height: 5px;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .tech-icon {
+            font-size: 2.5rem;
+            margin: 0 10px;
+            color: #3b82f6;
+        }
+        .cost-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cost-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="bg-white shadow-md rounded-lg p-6 mb-8 flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold text-blue-800">Hébergement & Domaine pour Plateformes Ministérielles</h1>
+                <p class="text-gray-600 mt-2">Solution économique et évolutive avec 001.africa</p>
+            </div>
+            <div class="mt-4 md:mt-0">
+                <img src="https://via.placeholder.com/150x50?text=001.africa" alt="001.africa Logo" class="h-12">
+            </div>
+        </header>
+
+        <!-- Progress bar -->
+        <div class="bg-white rounded-lg shadow mb-8">
+            <div class="progress-bar rounded-l-lg" style="width: 14%"></div>
+        </div>
+
+        <!-- Slides container -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <!-- Slide 1 - Introduction -->
+            <div class="slide active p-8">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                        <h2 class="text-2xl font-bold text-blue-700 mb-4">Solution d'hébergement pour plateformes ministérielles</h2>
+                        <p class="text-gray-700 mb-4">Une architecture évolutive et économique pour déployer plusieurs plateformes sur un même domaine .bj</p>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                            <li>Gestion centralisée via 001.africa</li>
+                            <li>Support multi-technologies (Flask, Node.js, PHP)</li>
+                            <li>Bases de données MySQL et PostgreSQL</li>
+                            <li>Solution évolutive selon les besoins</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 flex items-center justify-center">
+                        <img src="https://via.placeholder.com/400x250?text=Architecture+VPS" alt="Architecture VPS" class="rounded-lg shadow">
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <button onclick="nextSlide()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        Commencer la présentation <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Slide 2 - Domaine -->
+            <div class="slide p-8">
+                <h2 class="text-2xl font-bold text-blue-700 mb-6 text-center">1. Gestion du domaine .bj</h2>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-globe text-blue-600 text-4xl mr-4"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-blue-800">Domaine .bj</h3>
+                                    <p class="text-gray-600">Extension officielle du Bénin</p>
+                                </div>
+                            </div>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Coût: environ 10 000 FCFA/an</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Gestion simple via 001.africa</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Configuration DNS, sous-domaines et emails</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Exemples: denonciation.bj, mission.bj</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-6">
+                        <img src="https://via.placeholder.com/400x250?text=Gestion+Domaine" alt="Gestion Domaine" class="rounded-lg shadow">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 - Hébergement VPS -->
+            <div class="slide p-8">
+                <h2 class="text-2xl font-bold text-blue-700 mb-6 text-center">2. Solution d'hébergement VPS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">VPS Standard Recommandé</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-3 rounded shadow">
+                                <i class="fas fa-microchip text-blue-500 mb-2"></i>
+                                <p class="font-medium">4 CPU</p>
+                            </div>
+                            <div class="bg-white p-3 rounded shadow">
+                                <i class="fas fa-memory text-blue-500 mb-2"></i>
+                                <p class="font-medium">8 Go RAM</p>
+                            </div>
+                            <div class="bg-white p-3 rounded shadow">
+                                <i class="fas fa-database text-blue-500 mb-2"></i>
+                                <p class="font-medium">100 Go SSD</p>
+                            </div>
+                            <div class="bg-white p-3 rounded shadow">
+                                <i class="fas fa-network-wired text-blue-500 mb-2"></i>
+                                <p class="font-medium">5 To trafic</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">Avantages du VPS</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Coût: ~25 000 FCFA/mois (300 000 FCFA/an)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Déploiement de plusieurs sites/plateformes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Accès root complet</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Serveur Linux (Ubuntu conseillé)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-exclamation-triangle text-yellow-400"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm text-yellow-700">
+                                <strong>Important:</strong> Sécurisation et sauvegarde à mettre en place pour protéger les données.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 - Bases de données -->
+            <div class="slide p-8">
+                <h2 class="text-2xl font-bold text-blue-700 mb-6 text-center">3. Bases de données</h2>
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+                                <div class="text-center">
+                                    <i class="fab fa-mysql tech-icon"></i>
+                                    <h3 class="text-lg font-semibold mt-2">MySQL</h3>
+                                    <p class="text-gray-600 text-sm mt-2">Base de données relationnelle populaire</p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+                                <div class="text-center">
+                                    <i class="fas fa-database tech-icon"></i>
+                                    <h3 class="text-lg font-semibold mt-2">PostgreSQL</h3>
+                                    <p class="text-gray-600 text-sm mt-2">SGBD relationnel avancé</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-6">
+                        <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                            <h3 class="text-xl font-semibold text-blue-800 mb-4">Support complet pour:</h3>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Applications Flask et autres apps web</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Configuration et optimisation des bases</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Sauvegardes automatisées</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Gestion des utilisateurs et permissions</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5 - Multi-sites et technologies -->
+            <div class="slide p-8">
+                <h2 class="text-2xl font-bold text-blue-700 mb-6 text-center">4. Multi-sites et technologies supportées</h2>
+                <div class="mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">Architecture multi-sites</h3>
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 mb-4 md:mb-0">
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>Plusieurs applications sur le même VPS</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>Utilisation de sous-domaines (ex: denonciation.bj)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>Ou sous-répertoires (ex: bj/mission)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>Gestion via Nginx (proxy inverse)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="md:w-1/2">
+                                <img src="https://via.placeholder.com/400x200?text=Architecture+Multi-sites" alt="Architecture Multi-sites" class="rounded-lg shadow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">Technologies supportées</h3>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <div class="text-center">
+                                <i class="fab fa-python tech-icon"></i>
+                                <p class="font-medium">Flask</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fab fa-js tech-icon"></i>
+                                <p class="font-medium">Node.js</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fab fa-php tech-icon"></i>
+                                <p class="font-medium">PHP</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-server tech-icon"></i>
+                                <p class="font-medium">Gunicorn/uWSGI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6 - Déploiement et gestion -->
+            <div class="slide p-8">
+                <h2 class="text-2xl font-bold text-blue-700 mb-6 text-center">5. Déploiement et gestion des applications</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">Processus de déploiement</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <span class="text-blue-600">1</span>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-gray-700">Utiliser Gunicorn + systemd ou supervisor</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <span class="text-blue-600">2</span>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-gray-700">Les applications tournent en continu</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <span class="text-blue-600">3</span>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-gray-700">Démarrage/arrêt indépendant pour chaque app</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <span class="text-blue-600">4</span>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-gray-700">Fermeture du terminal ne stoppe pas les apps</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">Avantages de la solution</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Stabilité des applications</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Gestion centralisée</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Surveillance des processus</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Redémarrage automatique en cas de problème</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7 - Évolution progressive -->
+            <div class="slide p-8">
+                <h2 class="text-2xl font-bold text-blue-700 mb-6 text-center">6. Évolution progressive de l'infrastructure</h2>
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0">
+                                <h3 class="text-lg font-semibold text-blue-800 bg-blue-50 p-3 rounded">Phase 1 - Démarrage</h3>
+                            </div>
+                            <div class="md:w-2/3">
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                                        <span>VPS Standard (4 CPU, 8 Go RAM, 100 Go SSD)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                                        <span>Déploiement des plateformes clés</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                                        <span>Tests de charge et performance</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0">
+                                <h3 class="text-lg font-semibold text-blue-800 bg-blue-50 p-3 rounded">Phase 2 - Expansion</h3>
+                            </div>
+                            <div class="md:w-2/3">
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                                        <span>Ajout de nouvelles plateformes</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                                        <span>Montée en puissance du VPS si besoin</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                                        <span>Optimisation des ressources</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0">
+                                <h3 class="text-lg font-semibold text-blue-800 bg-blue-50 p-3 rounded">Phase 3 - Professionnalisation</h3>
+                            </div>
+                            <div class="md:w-2/3">
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                                        <span>Serveur dédié ou architecture multi-serveurs</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                                        <span>Haute disponibilité</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                                        <span>Support pour trafic important</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-arrow-right text-blue-500 mt-1 mr-2"></i>
+                                        <span>Load balancing et répartition de charge</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8 - Coût total -->
+            <div class="slide p-8">
+                <h2 class="text-2xl font-bold text-blue-700 mb-6 text-center">7. Coût total estimé initial</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="cost-card bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+                        <div class="text-center">
+                            <i class="fas fa-globe-africa text-4xl text-blue-500 mb-4"></i>
+                            <h3 class="text-lg font-semibold">Domaine .bj</h3>
+                            <p class="text-2xl font-bold text-blue-700 mt-2">10 000 FCFA</p>
+                            <p class="text-gray-500 text-sm mt-1">par an</p>
+                        </div>
+                    </div>
+                    <div class="cost-card bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+                        <div class="text-center">
+                            <i class="fas fa-server text-4xl text-blue-500 mb-4"></i>
+                            <h3 class="text-lg font-semibold">VPS Standard</h3>
+                            <p class="text-2xl font-bold text-blue-700 mt-2">300 000 FCFA</p>
+                            <p class="text-gray-500 text-sm mt-1">par an</p>
+                        </div>
+                    </div>
+                    <div class="cost-card bg-white p-6 rounded-lg shadow-md border-t-4 border-green-500">
+                        <div class="text-center">
+                            <i class="fas fa-lock text-4xl text-green-500 mb-4"></i>
+                            <h3 class="text-lg font-semibold">Certificat SSL</h3>
+                            <p class="text-2xl font-bold text-green-700 mt-2">Gratuit</p>
+                            <p class="text-gray-500 text-sm mt-1">(Let's Encrypt)</p>
+                        </div>
+                    </div>
+                    <div class="cost-card bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+                        <div class="text-center">
+                            <i class="fas fa-save text-4xl text-blue-500 mb-4"></i>
+                            <h3 class="text-lg font-semibold">Sauvegardes</h3>
+                            <p class="text-xl font-bold text-blue-700 mt-2">Optionnel</p>
+                            <p class="text-gray-500 text-sm mt-1">coût variable</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4">Total estimé première année</h3>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-700">Domaine + VPS Standard</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-3xl font-bold text-blue-700">310 000 FCFA</p>
+                            <p class="text-gray-500 text-sm">(~25 833 FCFA/mois)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 9 - Conclusion -->
+            <div class="slide p-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-blue-600 p-6 text-white">
+                        <h2 class="text-2xl font-bold text-center">Conclusion</h2>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                                <ul class="space-y-4 text-gray-700">
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                            <i class="fas fa-check text-blue-600"></i>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-gray-700">Solution économique et évolutive pour héberger plusieurs plateformes</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                            <i class="fas fa-check text-blue-600"></i>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-gray-700">Support multi-technologies (Flask, Node.js, PHP)</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                            <i class="fas fa-check text-blue-600"></i>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-gray-700">Bases MySQL/PostgreSQL incluses</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                            <i class="fas fa-check text-blue-600"></i>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-gray-700">Gestion complète via VPS avec accès root</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="md:w-1/2">
+                                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                                    <h3 class="text-xl font-semibold text-blue-800 mb-4">Prochaines étapes</h3>
+                                    <ol class="list-decimal pl-5 space-y-2 text-gray-700">
+                                        <li>Choix et enregistrement du domaine .bj</li>
+                                        <li>Configuration du VPS Standard</li>
+                                        <li>Déploiement des premières applications</li>
+                                        <li>Mise en place des sauvegardes</li>
+                                        <li>Surveillance et optimisation</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <button onclick="prevSlide()" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-lg mr-4 transition duration-300">
+                                <i class="fas fa-arrow-left mr-2"></i> Retour
+                            </button>
+                            <button onclick="restartPresentation()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                                Recommencer <i class="fas fa-redo ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex justify-between mt-6">
+            <button onclick="prevSlide()" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-lg transition duration-300">
+                <i class="fas fa-arrow-left mr-2"></i> Précédent
+            </button>
+            <div class="text-center">
+                <span id="currentSlide">1</span> / <span id="totalSlides">9</span>
+            </div>
+            <button onclick="nextSlide()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                Suivant <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 9;
+
+        // Initialize the presentation
+        document.addEventListener('DOMContentLoaded', function() {
+            updateSlideCounter();
+            updateProgressBar();
+        });
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Show the selected slide
+            if (n >= 1 && n <= totalSlides) {
+                slides[n - 1].classList.add('active');
+                currentSlide = n;
+                updateSlideCounter();
+                updateProgressBar();
+                
+                // Special case for first slide
+                if (n === 1) {
+                    document.querySelector('.progress-bar').classList.remove('rounded-l-lg', 'rounded-r-lg');
+                    document.querySelector('.progress-bar').classList.add('rounded-l-lg');
+                } 
+                // Special case for last slide
+                else if (n === totalSlides) {
+                    document.querySelector('.progress-bar').classList.remove('rounded-l-lg', 'rounded-r-lg');
+                    document.querySelector('.progress-bar').classList.add('rounded-r-lg');
+                } 
+                // Middle slides
+                else {
+                    document.querySelector('.progress-bar').classList.remove('rounded-l-lg', 'rounded-r-lg');
+                }
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                showSlide(currentSlide + 1);
+            } else {
+                // If we're at the end, loop back to the beginning
+                showSlide(1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                showSlide(currentSlide - 1);
+            } else {
+                // If we're at the beginning, go to the end
+                showSlide(totalSlides);
+            }
+        }
+
+        function restartPresentation() {
+            showSlide(1);
+        }
+
+        function updateSlideCounter() {
+            document.getElementById('currentSlide').textContent = currentSlide;
+            document.getElementById('totalSlides').textContent = totalSlides;
+        }
+
+        function updateProgressBar() {
+            const progressPercentage = (currentSlide / totalSlides) * 100;
+            document.querySelector('.progress-bar').style.width = `${progressPercentage}%`;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') {
+                nextSlide();
+            } else if (event.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>
